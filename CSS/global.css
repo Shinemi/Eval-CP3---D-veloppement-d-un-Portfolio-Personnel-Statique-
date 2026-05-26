@@ -5,8 +5,9 @@
     /* color palette */
     --indigo: #4F46E5;
     --lilas: #A855F7;
-    --blackFont: #1E1B2E;
+    --blackFont: #333333;
     --whiteFont: #FAFAFA;
+    --titleFont: #2D3047;
 
     /* font familys */
     --inter: "Inter";
@@ -16,6 +17,10 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--inter);
+    color: var(--blackFont);
+    font-size: 16px;
+    font-weight: 400;
 }
 
 ul{
@@ -29,7 +34,16 @@ li{
 
 a{
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    
+    &:hover{
+        color: var(--lilas);
+        transition: all 0.2s ease-in-out;
+    }
 }
+
+
+        
 
 h1, h2, h3{
     font-family: var(--playfair);
@@ -44,11 +58,94 @@ h1{
 h2{
     font-size: 36px;
     font-weight: 700;
-    color: var(--blackFont);
+    color: var(--titleFont);
 }
 
 h3{
     font-size: 24px;
     font-weight: 600;
-    color: var(--blackFont);
+    color: var(--titleFont);
+}
+
+body{
+    position: relative;
+}
+
+header{
+    background-color:#FFFFFFF2 ;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    position: static;
+
+}
+
+header div{
+    display: flex;
+    max-width: 1440px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+}
+
+header nav ul{
+    display: flex;
+    gap: 30px;
+}
+
+#logo{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: var(--playfair);
+}
+
+header a {
+    font-weight: 500;
+}
+
+footer{
+    background-color: var(--titleFont);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer>div{
+    width: 100%;
+}
+
+footer div div{
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+footer p , footer h2, footer i{
+        color: var(--whiteFont);
+}
+
+footer p{
+    color: #D1D5DB;
+    font-weight: 300;
+}
+
+footer .fa-brands{
+    display: flex;
+    justify-content: center;
+}
+
+footer span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer span i {
+    font-size: 22px;
+    background-color: var(--lilas);
+    border-radius: 30px;
+    padding: 10px 21px;
 }
