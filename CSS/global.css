@@ -25,6 +25,7 @@
     font-size: 16px;
     font-weight: 400;
     outline-color: var(--whiteFont) ;
+    scroll-behavior: smooth;
 }
 
 ul{
@@ -96,10 +97,11 @@ body{
 
 
 header{
-    background-color:#4e46e586 ;
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 1px 2px 0px #0000000D;
-    position: fixed;
+    background-color:#4e46e5 ;
+    box-shadow: 0px 3px 7px 5px  #3333333d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     width: 100%;
 }
 
@@ -392,7 +394,9 @@ footer a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 100px 0px;
+    padding: 100px 0px;
+    max-width: 1440px;
+    margin: auto;
 }
 #contact>p{
     max-width: 650px;text-align: center;
@@ -441,8 +445,83 @@ textarea{
 
 input[type="submit"]{
     width: fit-content;
+    border: none;
 }
 
 #labelMessage{
     margin-bottom: -15px;
+}
+
+
+
+/* ======================================== PAGE CONTACT : Section CONTACT ============================================ */
+
+#contact article{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#contact>div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#contact span i {
+    border-radius: 30px;
+    background-color: var(--lilas);
+    display: flex;
+    justify-content: center;
+    padding: 10px 21px;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        background-color: var(--indigo);
+    }
+}
+
+#contact .fa-brands, #contact .fa-solid{
+    font-size: 22px;
+    color: var(--whiteFont);
+}
+
+#contact .fa-solid{
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--lilas);
+    padding: 10px 21px;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        background-color: var(--indigo);
+    }
+}
+
+#contact a:hover{
+    background:none;
+    
+}
+
+#contact a{
+    width: fit-content;
+    display: flex;
+    padding: 0;
+}
+
+#contact>div p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0px;
+}
+
+#contact>div span{
+    display: flex;
+    gap: 10px;
+    margin: 10px 0px;
+}
+
+#contact h3 {
+    font-size: 30px;
+    padding-bottom: 20px;
 }
