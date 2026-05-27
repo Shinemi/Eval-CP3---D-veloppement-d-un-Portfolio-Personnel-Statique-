@@ -14,6 +14,9 @@
     --playfair: "Playfair Display";
 }
 
+/* ======================================== CSS DE BASE ============================================ */
+
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -21,6 +24,7 @@
     color: var(--blackFont);
     font-size: 16px;
     font-weight: 400;
+    outline-color: var(--whiteFont) ;
 }
 
 ul{
@@ -35,15 +39,17 @@ li{
 a{
     text-decoration: none;
     transition: all 0.2s ease-in-out;
+    padding: 10px;
+    border-radius: 30px;
+    color: var(--whiteFont);
     
     &:hover{
-        color: var(--lilas);
         transition: all 0.2s ease-in-out;
-    }
-}
-
-
+        background-color: var(--lilas);
+        border-radius: 30px;
         
+    }
+} 
 
 h1, h2, h3{
     font-family: var(--playfair);
@@ -71,11 +77,30 @@ body{
     position: relative;
 }
 
-header{
-    background-color:#FFFFFFF2 ;
-    box-shadow: 0px 1px 2px 0px #0000000D;
-    position: static;
+/* ======================================== CLASSES ============================================ */
 
+.CTA{
+    padding: 15px 20px;
+    background-color: var(--indigo);
+    color: var(--whiteFont); 
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        background-color: var(--lilas);
+        border-radius: 15px;
+    }
+}
+
+
+/* ======================================== HEADER ============================================ */
+
+
+header{
+    background-color:#4e46e586 ;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    position: fixed;
+    width: 100%;
 }
 
 header div{
@@ -96,11 +121,19 @@ header nav ul{
     font-size: 24px;
     font-weight: 700;
     font-family: var(--playfair);
+    &:hover{
+        background-color: #ffffff00;
+        transform: scale(1.05);
+    }
 }
 
 header a {
     font-weight: 500;
 }
+
+
+/* ======================================== FOOTER ============================================ */
+
 
 footer{
     background-color: var(--titleFont);
