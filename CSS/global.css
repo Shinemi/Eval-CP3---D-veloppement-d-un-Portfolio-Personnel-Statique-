@@ -369,6 +369,7 @@ footer a{
 
 #projects article div {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     margin: 20px 35px;
 }
@@ -692,4 +693,320 @@ input[type="submit"]{
 
 .imgRight{
     border-radius: 0px 15px 15px 0px;
+}
+
+/* ======================================== RESPONSIVE TABLETTE 1024px ============================================ */
+
+@media (max-width: 1024px) {
+
+    /* Header */
+    header div {
+        padding: 0px 30px;
+    }
+
+    /* Footer */
+    footer>div{
+        padding: 0px 10px;
+    }
+
+    /* Hero */
+    #intro #overlay div {
+        padding: 0px 30px;
+    }
+
+    #intro img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* About */
+    #about {
+        padding: 0px 30px;
+        height: auto;
+    }
+
+    #about > div {
+        gap: 20px;
+    }
+
+    #about article:nth-child(2) > div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Compétences */
+    #compétences {
+        padding: 60px 30px;
+    }
+
+    #compétences article > div {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Projects (home) */
+    #projects {
+        padding: 0px 30px;
+        height: auto;
+        margin-top: 60px;
+    }
+
+    #projects > div {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #projects article {
+        height: auto;
+    }
+
+     /* Qui suis-je */
+    #quiJeSuis {
+        height: auto;
+    }
+
+    #quiJeSuis article {
+        padding: 60px 30px;
+    }
+
+    /* Compétences */
+    #compétences {
+        padding: 60px 30px;
+    }
+
+    #compétences article > div {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+    /* Page projets */
+    #pageProjet {
+        padding: 60px 30px;
+    }
+
+    #pageProjet article {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Contact */
+    #contact {
+        padding: 60px 30px;
+    }
+
+    #contact > div {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-items: center;
+    }
+
+    form {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* ======================================== RESPONSIVE PHONE 768px ============================================ */
+
+
+@media (max-width: 768px) {
+
+    /* Titres */
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    /* Header */
+
+    header nav  {
+        display: none;
+    }
+
+    header .fa-bars{
+        display: flex;
+    }
+
+    /* Hero */
+    #intro {
+        height: auto;
+        min-height: 100svh;
+    }
+
+    #intro #overlay {
+        height: auto;
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        padding: 60px 0px;
+    }
+
+    #intro #overlay div {
+        grid-template-columns: 1fr;
+        padding: 0px 20px;
+        gap: 30px;
+        text-align: center;
+        width: 100%;
+    }
+
+    #intro img {
+        width: 180px;
+        height: 180px;
+        order: -1;
+        justify-self: center;
+    }
+    
+    #intro p {
+        margin: 20px 0px 40px 0px;
+    }
+
+    /* About */
+    #about {
+        padding: 60px 20px;
+    }
+
+    #about h2 {
+        margin: 40px 0px;
+    }
+
+    #about > div {
+        grid-template-columns: 1fr;
+    }
+
+    #about article:nth-child(2) > div {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Compétences */
+    #compétences {
+        padding: 60px 20px;
+    }
+
+
+    /* Qui suis-je */
+    #quiJeSuis {
+        height: auto;
+    }
+
+    #quiJeSuis article {
+        padding: 40px 20px;
+        text-align: left;
+    }
+
+    #quiJeSuis h1 {
+        font-size: 36px;
+        padding: 0px 0px 20px 0px;
+    }
+
+    #quiJeSuis h2 {
+        font-size: 22px;
+        padding: 25px 0px 10px 0px;
+    }
+
+    #quiJeSuis p {
+        padding: 5px 0px;
+    }
+
+    /* Compétences */
+    #compétences {
+        padding: 60px 20px;
+    }
+
+    #compétences article > div {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    #compétences article div i {
+        font-size: 36px;
+    }
+
+    /* Projects (home) */
+    #projects {
+        padding: 60px 20px;
+        margin-top: 0px;
+    }
+
+    #projects > div {
+        grid-template-columns: 1fr;
+    }
+
+    #projects article {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    #projects .CTA {
+        margin-top: 20px;
+    }
+
+    /* Page projets */
+    #pageProjet {
+        padding: 60px 20px;
+    }
+
+    #pageProjet article {
+        grid-template-columns: 1fr;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    #pageProjet .imgLeft,
+    #pageProjet .imgRight {
+        border-radius: 15px 15px 0px 0px;
+        height: 220px;
+        width: 100%;
+        object-fit: cover;
+        order: 0;
+    }
+
+    #pageProjet article div {
+        order: 1;
+        margin: 0px;
+        padding: 25px;
+    }
+
+    .vignette {
+        margin-left: 0px;
+    }
+
+    #pageProjet article .imgRight {
+        order: 0;
+    }
+
+    #pageProjet article ul {
+        flex-wrap: wrap;
+    }
+
+
+    /* Contact */
+    #contact {
+        padding: 60px 20px;
+    }
+
+    #contact > div {
+        grid-template-columns: 1fr;
+    }
+
+    form div {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    footer {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    footer div div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
 }
